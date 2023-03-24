@@ -1,0 +1,44 @@
+{
+  "name": "terminal-pixel",
+  "version": "1.1.0",
+  "description": "",
+  "main": "./esm/index.mjs",
+  "type": "module",
+  "bin": {
+    "terminal-pixel": "./bin/index.mjs"
+  },
+  "files": [
+    "esm",
+    "bin"
+  ],
+  "scripts": {
+    "build": "rm -rf esm && npm run build:esm",
+    "build:esm": "tsc -b ./tsconfig.json",
+    "build:w": "tsc -b ./tsconfig.json -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiyangzhaoa/terminal-pixel.git"
+  },
+  "author": "SSSS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shiyangzhaoa/terminal-pixel/issues"
+  },
+  "homepage": "https://github.com/shiyangzhaoa/terminal-pixel#readme",
+  "devDependencies": {
+    "@types/color": "^3.0.3",
+    "@types/node": "^18.15.5",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "canvas": "^2.11.0",
+    "commander": "^10.0.0",
+    "image-size": "^1.0.2"
+  }
+}
