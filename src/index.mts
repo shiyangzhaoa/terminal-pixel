@@ -26,6 +26,7 @@ program
   .option('-s, --size <number>', 'size of canvas')
   .option('-w, --width <number>', 'width of canvas')
   .option('-h, --height <number>', 'height of canvas')
+  .option('--disable-linewrap', 'disable linewrap')
   .action(async (src, options) => {
     const dimensions = sizeOf(src)
     const size = {
@@ -44,11 +45,14 @@ program
 
     let outStr = '';
 
+    if (options.disableLinewrap)
+      outStr += '\u001B[?7l'; // https://espterm.github.io/docs/VT100%20escape%20codes.html
+
     for (let row = 0; row < height; row += 2) {
       for (let col = 0; col < width; col += 1) {
         const topIndex = ((row * width) + col) * 4;
         const bottomIndex = (((row + 1) * width) + col) * 4;
-  
+
         const color = getColorBy(data, topIndex)('color');
         const bgColor = getColorBy(data, bottomIndex)('bgColor');
 
@@ -57,6 +61,9 @@ program
 
       outStr += '\n';
     }
+
+    if (options.disableLinewrap)
+      outStr += '\u001B[?7h'; // Restore line wrapping
 
     console.log(outStr);
   });
