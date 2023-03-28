@@ -6,11 +6,19 @@ import { ansi16mClose, ansi16mOpen } from './ansi-styles/index.mjs';
 
 const program = new Command();
 
+const DEFAULT_SIZE = 120;
+const getLT = (max: number) => (v: number) => v > max ? max : v;
+
 const getColorBy = (data: Uint8ClampedArray, index: number) => (type: 'color' | 'bgColor') => {
   const r = data[index];
   const g = data[index + 1];
   const b = data[index + 2];
   const a = data[index + 3];
+
+  if (r === undefined) {
+    return;
+  }
+  
   const open = a !== 0 ? ansi16mOpen[type](r, g, b) : ansi16mOpen[type](255, 255, 255);
 
   return open;
@@ -23,22 +31,33 @@ program
 
 program
   .argument('<string>', 'src of image')
-  .option('-s, --size <number>', 'size of canvas')
-  .option('-w, --width <number>', 'width of canvas')
-  .option('-h, --height <number>', 'height of canvas')
+  .option('-s, --size <string>', 'size of canvas')
   .option('--disable-linewrap', 'disable linewrap')
   .action(async (src, options) => {
-    const dimensions = sizeOf(src)
-    const size = {
-      width: +options.width || +options.size || dimensions.width || 120,
-      height: +options.height || +options.size || dimensions.height || 120,
+    const maxWidth = process.stdout.columns;
+    const getLTMax = getLT(maxWidth);
+    const dimensions = sizeOf(src);
+
+    let size = {
+      width: getLTMax(dimensions.width || DEFAULT_SIZE),
+      height: dimensions.height || DEFAULT_SIZE,
     };
+
+    if (options.size) {
+      const [width, height] = options.size.split('x');
+      const h = height ? +height : +width;
+
+      size = {
+        width: getLTMax(+width),
+        height: h,
+      };
+    }
 
     const canvas = createCanvas(size.width, size.height);
     const ctx = canvas.getContext('2d');
     const image = await loadImage(src);
 
-    ctx.drawImage(image, 0, 0, size.width, size.height);
+    ctx.drawImage(image, 0, 0, dimensions.width || size.width, dimensions.height || size.height);
 
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const { width, height, data } = imageData;
@@ -56,7 +75,7 @@ program
         const color = getColorBy(data, topIndex)('color');
         const bgColor = getColorBy(data, bottomIndex)('bgColor');
 
-        outStr += `${bgColor}${color}▀${ansi16mClose.all}`
+        outStr += bgColor ? `${bgColor}${color}▀${ansi16mClose.all}` : `${color}▀${ansi16mClose.all}`;
       }
 
       outStr += '\n';

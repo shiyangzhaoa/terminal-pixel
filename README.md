@@ -37,18 +37,6 @@ terminal-pixel xxx.png
 ```shell
 terminal-pixel xxx.png -s 40
 // render size: 40 * 40
-```
-
-### Width
-
-```shell
-terminal-pixel xxx.png -w 40
-// render size: 40 * image.height
-```
-
-### Height
-
-```shell
-terminal-pixel xxx.png -h 40
-// render size: image.width * 40
+terminal-pixel xxx.png -s 40x10
+// render size: 40 * 10
 ```

@@ -7,3 +7,10 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - 🎉 Everything
+
+## 1.1.1
+
+### Fixed
+
+- 🍵 Output no wrap
+- 🔧 Fix rendering issues when the number of rows is odd
