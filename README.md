@@ -26,17 +26,6 @@ npm install terminal-pixel -g
 ## How to use
 
 ```shell
-terminal-pixel xxx.png
-// or npx terminal-pixel xxx.png
-```
-
-## Options
-
-### Size
-
-```shell
-terminal-pixel xxx.png -s 40
-// render size: 40 * 40
-terminal-pixel xxx.png -s 40x10
-// render size: 40 * 10
+terminal-pixel
+// or npx terminal-pixel
 ```

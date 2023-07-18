@@ -53,6 +53,124 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@inquirer/checkbox@^1.3.4":
+  version "1.3.4"
+  resolved "https://npm.shopee.io/@inquirer%2fcheckbox/-/checkbox-1.3.4.tgz#c3bbf9750aa1c889ed30a15c68bfab19e51c1279"
+  integrity sha512-1UMojfx/QY9nVQYkTSkKQ137TcVZi9Rqn44XbEVEm9+DL3pxzvW3nwLK57bt9ugGKt0NYS947sPDK5bkzbzkkw==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    ansi-escapes "^4.3.2"
+    chalk "^4.1.2"
+    figures "^3.2.0"
+
+"@inquirer/confirm@^2.0.5":
+  version "2.0.5"
+  resolved "https://npm.shopee.io/@inquirer%2fconfirm/-/confirm-2.0.5.tgz#201d1e8509e2e8da916f08c424e1baeaa98db09f"
+  integrity sha512-+DjTHTgTGz2bsmG1aXsqIF/ZEhPjF0SFVdLLsGvlYzf6Q0iUzRgFbT2He5wyWlw/64XnJpJzrZyCJ+bxVQhzfg==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    chalk "^4.1.2"
+
+"@inquirer/core@^2.3.1":
+  version "2.3.1"
+  resolved "https://npm.shopee.io/@inquirer%2fcore/-/core-2.3.1.tgz#b7a1563ef3830a20485f551257779657e843e53f"
+  integrity sha512-faYAYnIfdEuns3jGKykaog5oUqFiEVbCx9nXGZfUhyEEpKcHt5bpJfZTb3eOBQKo8I/v4sJkZeBHmFlSZQuBCw==
+  dependencies:
+    "@inquirer/type" "^1.1.1"
+    "@types/mute-stream" "^0.0.1"
+    "@types/node" "^20.4.2"
+    "@types/wrap-ansi" "^3.0.0"
+    ansi-escapes "^4.3.2"
+    chalk "^4.1.2"
+    cli-spinners "^2.8.0"
+    cli-width "^4.0.0"
+    figures "^3.2.0"
+    mute-stream "^1.0.0"
+    run-async "^3.0.0"
+    string-width "^4.2.3"
+    strip-ansi "^6.0.1"
+    wrap-ansi "^6.0.1"
+
+"@inquirer/editor@^1.2.3":
+  version "1.2.3"
+  resolved "https://npm.shopee.io/@inquirer%2feditor/-/editor-1.2.3.tgz#126dffc232e3058bd7da8aec0b2ac9427693cc86"
+  integrity sha512-kxq0cIfqzQlehc/2FYVD9+M2aMBudxMVTcVcvHQ5ZSbzgAvmERmBtxynnETab49MrNTeh8naFEZqqwFvR2d3Ew==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    chalk "^4.1.2"
+    external-editor "^3.0.3"
+
+"@inquirer/expand@^1.1.4":
+  version "1.1.4"
+  resolved "https://npm.shopee.io/@inquirer%2fexpand/-/expand-1.1.4.tgz#aa727fd960e4c5d3bac0792d82c2ff50c5ceda1e"
+  integrity sha512-+FOWWxunIGmbuu/QGsBV7ieUnFMRsgOsGBK4ysGGdTXZSO7uUPXfu45iPyhtmGtHTJb/DM26N5uwhA+z+uT6iQ==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    chalk "^4.1.2"
+    figures "^3.2.0"
+
+"@inquirer/input@^1.2.4":
+  version "1.2.4"
+  resolved "https://npm.shopee.io/@inquirer%2finput/-/input-1.2.4.tgz#8f12e3caef7dd2a3de9e5a4c333588bb7c3f3521"
+  integrity sha512-niXWIF6K1e7S+OPgTF+6EPJz6oCukbSP30ORzmzAGS8YQ0E62V9limWRdsmKdBmRlkc4kpN0UuIuRyEjQ/F0Gg==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    chalk "^4.1.2"
+
+"@inquirer/password@^1.1.4":
+  version "1.1.4"
+  resolved "https://npm.shopee.io/@inquirer%2fpassword/-/password-1.1.4.tgz#4cf686ab198632617f40cbd71acc5fc0232f444e"
+  integrity sha512-RG74N/fVniPgJc3nbP7f2CWzoWfjH3k/p7zL6UOlOQ0jizKk6zp/ZBlJ526V17s51ccY5k+qt2jWlicms8mWxg==
+  dependencies:
+    "@inquirer/input" "^1.2.4"
+    "@inquirer/type" "^1.1.1"
+    chalk "^4.1.2"
+
+"@inquirer/prompts@^2.3.1":
+  version "2.3.1"
+  resolved "https://npm.shopee.io/@inquirer%2fprompts/-/prompts-2.3.1.tgz#fe430f96e510cf352efeb77af2dbd6d3049e677c"
+  integrity sha512-YQeBFzIE+6fcec5N/U2mSz+IcKEG4wtGDwF7MBLIDgITWzB3o723JpKJ1rxWqdCvTXkYE+gDXK/seSN6omo3DQ==
+  dependencies:
+    "@inquirer/checkbox" "^1.3.4"
+    "@inquirer/confirm" "^2.0.5"
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/editor" "^1.2.3"
+    "@inquirer/expand" "^1.1.4"
+    "@inquirer/input" "^1.2.4"
+    "@inquirer/password" "^1.1.4"
+    "@inquirer/rawlist" "^1.2.4"
+    "@inquirer/select" "^1.2.4"
+
+"@inquirer/rawlist@^1.2.4":
+  version "1.2.4"
+  resolved "https://npm.shopee.io/@inquirer%2frawlist/-/rawlist-1.2.4.tgz#ecbc93c16ec88e0777e7f6b44441f704c7df6251"
+  integrity sha512-bS6RovFf/OOcFE3PRa9lL4HK2iGM9RInkkHU5K+w3hjwwe7UF/C3PvfzxZTUAWFXgowP0KYUsOG+KVZOu9vmuw==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    chalk "^4.1.2"
+
+"@inquirer/select@^1.2.4":
+  version "1.2.4"
+  resolved "https://npm.shopee.io/@inquirer%2fselect/-/select-1.2.4.tgz#389cdbe5e8b28bab2ee31c194e620b4818166591"
+  integrity sha512-mgEH0V6dEhVZuOlOiCRAjHW4FnrBlsLlq3QTRPeaKFw+KV2ygZzzDdOrtkN9gPE1nNeJyl6Bjq4CLveZbPqEOg==
+  dependencies:
+    "@inquirer/core" "^2.3.1"
+    "@inquirer/type" "^1.1.1"
+    ansi-escapes "^4.3.2"
+    chalk "^4.1.2"
+    figures "^3.2.0"
+
+"@inquirer/type@^1.1.1":
+  version "1.1.1"
+  resolved "https://npm.shopee.io/@inquirer%2ftype/-/type-1.1.1.tgz#d92259b8ed866768396b0dce6b4d065be6957784"
+  integrity sha512-ACc2N1AnIYtg+bfnitna0OJ1rptWqa8apdDDRQnRWb0R5MEPGAgvqWaDbZahATXOnglqKDRIeHFEQfqxhM6p/g==
+
 "@mapbox/node-pre-gyp@^1.0.0":
   version "1.0.10"
   resolved "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.10.tgz#8e6735ccebbb1581e5a7e652244cadc8a844d03c"
@@ -118,6 +236,18 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
+"@types/mute-stream@^0.0.1":
+  version "0.0.1"
+  resolved "https://npm.shopee.io/@types%2fmute-stream/-/mute-stream-0.0.1.tgz#8ec7d16d51e2ceb054d8be0226250169d17af5b2"
+  integrity sha512-0yQLzYhCqGz7CQPE3iDmYjhb7KMBFOP+tBkyw+/Y2YyDI5wpS7itXXxneN1zSsUwWx3Ji6YiVYrhAnpQGS/vkw==
+  dependencies:
+    "@types/node" "*"
+
+"@types/node@*", "@types/node@^20.4.2":
+  version "20.4.2"
+  resolved "https://npm.shopee.io/@types%2fnode/-/node-20.4.2.tgz#129cc9ae69f93824f92fac653eebfb4812ab4af9"
+  integrity sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==
+
 "@types/node@^18.15.5":
   version "18.15.6"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.15.6.tgz#af98ef4a36e7ac5f2d03040f3109fcce972bf6cb"
@@ -127,6 +257,11 @@
   version "7.3.13"
   resolved "https://registry.npmjs.org/@types/semver/-/semver-7.3.13.tgz#da4bfd73f49bd541d28920ab0e2bf0ee80f71c91"
   integrity sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==
+
+"@types/wrap-ansi@^3.0.0":
+  version "3.0.0"
+  resolved "https://npm.shopee.io/@types%2fwrap-ansi/-/wrap-ansi-3.0.0.tgz#18b97a972f94f60a679fd5c796d96421b9abb9fd"
+  integrity sha512-ltIpx+kM7g/MLRZfkbL7EsCEjfzCcScLpkg37eXEtx5kmrAKBkTJwd1GIAjDSL8wTpM6Hzn5YO4pSb91BEwu1g==
 
 "@typescript-eslint/eslint-plugin@^5.48.0":
   version "5.56.0"
@@ -244,12 +379,19 @@ ajv@^6.10.0, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+ansi-escapes@^4.3.2:
+  version "4.3.2"
+  resolved "https://npm.shopee.io/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
+  integrity sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==
+  dependencies:
+    type-fest "^0.21.3"
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
 
-ansi-styles@^4.1.0:
+ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz#edd803628ae71c04c85ae7a0906edad34b648937"
   integrity sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==
@@ -365,7 +507,7 @@ canvas@^2.11.0:
     nan "^2.17.0"
     simple-get "^3.0.3"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -373,10 +515,25 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chardet@^0.7.0:
+  version "0.7.0"
+  resolved "https://npm.shopee.io/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
+  integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
+
 chownr@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
+
+cli-spinners@^2.8.0:
+  version "2.9.0"
+  resolved "https://npm.shopee.io/cli-spinners/-/cli-spinners-2.9.0.tgz#5881d0ad96381e117bbe07ad91f2008fe6ffd8db"
+  integrity sha512-4/aL9X3Wh0yiMQlE+eeRhWP6vclO3QRtw1JHKIT0FFUs5FjpFmESqtMvYZ0+lbzBw900b95mS0hohy+qn2VK/g==
+
+cli-width@^4.0.0:
+  version "4.0.0"
+  resolved "https://npm.shopee.io/cli-width/-/cli-width-4.0.0.tgz#a5622f6a3b0a9e3e711a25f099bf2399f608caf6"
+  integrity sha512-ZksGS2xpa/bYkNzN3BAw1wEjsLV/ZKOf/CCrJ/QOBsxx6fOARIkwTutxp1XIOIohi6HKmOFjMoK/XaqDVUpEEw==
 
 color-convert@^2.0.1:
   version "2.0.1"
@@ -554,6 +711,11 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+escape-string-regexp@^1.0.5:
+  version "1.0.5"
+  resolved "https://npm.shopee.io/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
+  integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+
 escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
@@ -708,6 +870,15 @@ esutils@^2.0.2:
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
+external-editor@^3.0.3:
+  version "3.1.0"
+  resolved "https://npm.shopee.io/external-editor/-/external-editor-3.1.0.tgz#cb03f740befae03ea4d283caed2741a83f335495"
+  integrity sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew==
+  dependencies:
+    chardet "^0.7.0"
+    iconv-lite "^0.4.24"
+    tmp "^0.0.33"
+
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
@@ -745,6 +916,13 @@ fastq@^1.6.0:
   integrity sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==
   dependencies:
     reusify "^1.0.4"
+
+figures@^3.2.0:
+  version "3.2.0"
+  resolved "https://npm.shopee.io/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
+  integrity sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==
+  dependencies:
+    escape-string-regexp "^1.0.5"
 
 file-entry-cache@^6.0.1:
   version "6.0.1"
@@ -969,6 +1147,13 @@ https-proxy-agent@^5.0.0:
   dependencies:
     agent-base "6"
     debug "4"
+
+iconv-lite@^0.4.24:
+  version "0.4.24"
+  resolved "https://npm.shopee.io/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+  integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3"
 
 ignore@^5.2.0:
   version "5.2.4"
@@ -1279,6 +1464,11 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
+mute-stream@^1.0.0:
+  version "1.0.0"
+  resolved "https://npm.shopee.io/mute-stream/-/mute-stream-1.0.0.tgz#e31bd9fe62f0aed23520aa4324ea6671531e013e"
+  integrity sha512-avsJQhyd+680gKXyG/sQc0nXaC6rBkPOfyHYcFb9+hdkqQkR9bdnkJ0AMZhke0oesPqIO+mFFJ+IdBc7mst4IA==
+
 nan@^2.17.0:
   version "2.17.0"
   resolved "https://registry.npmjs.org/nan/-/nan-2.17.0.tgz#c0150a2368a182f033e9aa5195ec76ea41a199cb"
@@ -1370,6 +1560,11 @@ optionator@^0.9.1:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.3"
+
+os-tmpdir@~1.0.2:
+  version "1.0.2"
+  resolved "https://npm.shopee.io/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
+  integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
 
 p-limit@^3.0.2:
   version "3.1.0"
@@ -1495,6 +1690,11 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
+run-async@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm.shopee.io/run-async/-/run-async-3.0.0.tgz#42a432f6d76c689522058984384df28be379daad"
+  integrity sha512-540WwVDOMxA6dN6We19EcT9sc3hkXPw5mzRNGM3FkdN/vtE9NFvj5lFAPNwUDmJjXidm3v7TC1cTE7t17Ulm1Q==
+
 run-parallel@^1.1.9:
   version "1.2.0"
   resolved "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz#66d1368da7bdf921eb9d95bd1a9229e7f21a43ee"
@@ -1515,6 +1715,11 @@ safe-regex-test@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.3"
     is-regex "^1.1.4"
+
+"safer-buffer@>= 2.1.2 < 3":
+  version "2.1.2"
+  resolved "https://npm.shopee.io/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+  integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
 semver@^6.0.0, semver@^6.3.0:
   version "6.3.0"
@@ -1578,7 +1783,7 @@ slash@^3.0.0:
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.2.3:
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -1621,7 +1826,7 @@ string_decoder@^1.1.1:
   dependencies:
     safe-buffer "~5.2.0"
 
-strip-ansi@^6.0.1:
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -1666,6 +1871,13 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==
+
+tmp@^0.0.33:
+  version "0.0.33"
+  resolved "https://npm.shopee.io/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
+  integrity sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==
+  dependencies:
+    os-tmpdir "~1.0.2"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
@@ -1712,6 +1924,11 @@ type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
+
+type-fest@^0.21.3:
+  version "0.21.3"
+  resolved "https://npm.shopee.io/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
+  integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
 
 typed-array-length@^1.0.4:
   version "1.0.4"
@@ -1803,6 +2020,15 @@ word-wrap@^1.2.3:
   version "1.2.3"
   resolved "https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
+
+wrap-ansi@^6.0.1:
+  version "6.2.0"
+  resolved "https://npm.shopee.io/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
+  integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
 
 wrappy@1:
   version "1.0.2"
