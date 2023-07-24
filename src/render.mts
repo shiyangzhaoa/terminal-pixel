@@ -30,6 +30,8 @@ export const renderImageData = (imageData: ImageData) => (outStr = '') => {
 
       outStr += bgColor ? `${bgColor}${color}▀${ansi16mClose.all}` : `${color}▀${ansi16mClose.all}`;
     }
+
+    outStr += '\n';
   }
 
   return outStr;

@@ -14,7 +14,6 @@ program
   .version('1.1.2');
 
 program
-  .option('-s, --size <string>', 'size of canvas')
   .option('--disable-linewrap', 'disable linewrap')
   .action(async (options: Options) => {
     const type = await select({

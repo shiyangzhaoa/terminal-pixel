@@ -17,7 +17,7 @@ const color = {
 };
 
 const keyboard = {
-  esc: '\u001b',
+  Esc: '\u001b',
   ArrowUp: '\u001b[A',
   ArrowDown: '\u001b[B',
   ArrowLeft: '\u001b[D',
@@ -35,19 +35,10 @@ class SnakeBody {
     this.y = y;
   }
 
-  move(direction: Direction) {
-    switch (direction) {
-      case Direction.Up: --this.y; break;
-      case Direction.Down: ++this.y; break;
-      case Direction.Left: --this.x; break;
-      case Direction.Right: ++this.x; break;
-    }
-  }
-
   checkValid() {
     return this.snake.body.every(that => this === that || !this.isSamePlace(that))
-      && (this.x > 0 && this.x < this.snake.game.width - 1)
-      && (this.y > 0 && this.y < this.snake.game.height - 1)
+      && (this.x >= 0 && this.x <= this.snake.game.width - 1)
+      && (this.y >= 0 && this.y <= this.snake.game.height - 1)
   }
 
   isSamePlace(that: SnakeBody | null) {
@@ -69,7 +60,8 @@ class Snake {
   constructor(defaultDirection = Direction.Right) {
     this.game = {
       width: screen.w,
-      height: screen.h,
+      // cursor = 2
+      height: screen.h - 2,
     };
 
     const { width, height } = this.game;
@@ -79,27 +71,6 @@ class Snake {
       new SnakeBody(this, (width / 2 - 2) | 0, (height / 2) | 0),
       new SnakeBody(this, (width / 2 - 1) | 0, (height / 2) | 0),
     ];
-
-    // addEventListener('keydown', e => {
-    //   switch (e.key) {
-    //     case 'ArrowDown':
-    //       if (this.direction !== Direction.Up) this.nextDirection = Direction.Down;
-    //       e.preventDefault();
-    //       break;
-    //     case 'ArrowUp':
-    //       if (this.direction !== Direction.Down) this.nextDirection = Direction.Up;
-    //       e.preventDefault();
-    //       break;
-    //     case 'ArrowLeft':
-    //       if (this.direction !== Direction.Right) this.nextDirection = Direction.Left;
-    //       e.preventDefault();
-    //       break;
-    //     case 'ArrowRight':
-    //       if (this.direction !== Direction.Left) this.nextDirection = Direction.Right;
-    //       e.preventDefault();
-    //       break;
-    //   }
-    // });
 
     this.nextDirection = defaultDirection;
 
@@ -112,7 +83,7 @@ class Snake {
     stdin.resume();
     stdin.setEncoding('utf8');
     stdin.on('data', (key) => {
-      if (JSON.stringify(key) === JSON.stringify(keyboard.esc)) {
+      if (JSON.stringify(key) === JSON.stringify(keyboard.Esc)) {
         this.exit();
 
         return;
@@ -138,6 +109,7 @@ class Snake {
   }
 
   exit() {
+    console.log(`Your score: ${this.body.length - 4}`);
     clearTimeout(this.timeoutHandle);
     process.stdin.removeAllListeners();
     process.exit(0);
@@ -185,7 +157,7 @@ class Snake {
     } while (this.body.some(x => x.isSamePlace(this.food)));
   }
 
-  draw(cb: () => void) {
+  draw(isFirst: boolean | undefined, run: () => void) {
     const list = new Array(this.game.width * this.game.height).fill(color.grey).flat();
 
     const draw = (x: number, y: number, c: number[]) => {
@@ -211,26 +183,30 @@ class Snake {
     };
 
     const outputStr = renderImageData(imageData)();
-    process.stdout.write(`\u001B[?25l${outputStr}\u001B[?25h`, () => {
-      cb();
+
+    if (isFirst) {
+      process.stdout.write('\u001b[2J');
+    }
+
+    process.stdout.write(`\u001b[H${outputStr}`, () => {
+      run();
     });
   }
 
-  run() {
+  run(start?: boolean) {
     this.move();
     if (!this.food) this.generateFood();
-    this.draw(() => {
-      this.timeoutHandle = setTimeout(() => this.run(), 200);
-    });
-    if (!this.checkValid()) {
-      console.log(`Your score: ${this.body.length - 4}`);
-      this.exit();
 
-      return;
+    if (!this.checkValid()) {
+      this.exit();
+    } else {
+      this.draw(start, () => {
+        this.timeoutHandle = setTimeout(() => this.run(), 200);
+      });
     }
   }
 }
 
 export function snake(){
-  new Snake().run();
+  new Snake().run(true);
 }

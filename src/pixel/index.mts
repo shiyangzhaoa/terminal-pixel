@@ -17,7 +17,7 @@ export async function pixel(options: Options) {
       validate: async (_src) => {
         const src= _src.trim();
         try {
-          fs.accessSync(src)
+          fs.accessSync(src);
         } catch {
           return Promise.reject(`no such file: ${src}`);
         }
@@ -34,6 +34,10 @@ export async function pixel(options: Options) {
 
     if (isImage(src)) {
       const dimensions = sizeOf(src);
+
+      if (dimensions.width && dimensions.width < size.w) {
+        size.w = dimensions.width;
+      }
 
       const scale = dimensions.width ? size.w / dimensions.width : 1;
       size.h = dimensions.height ? Math.ceil(scale * dimensions.height) : size.h;
@@ -58,7 +62,7 @@ export async function pixel(options: Options) {
     }
 
     throw new Error('something went wrong');
-  } catch {
-    console.log('Please check your input');
+  } catch (err) {
+    console.log((err as Error).message || 'Please check your input');
   }
 }
