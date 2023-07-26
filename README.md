@@ -14,7 +14,7 @@ Render Pixel in Your Terminal
 ## Example
 
 <p>
-  <img src="./example.jpg" alt="Example">
+  <img src="./example.png" alt="Example">
 </p>
 
 ## Install
@@ -26,17 +26,30 @@ npm install terminal-pixel -g
 ## How to use
 
 ```shell
-terminal-pixel xxx.png
-// or npx terminal-pixel xxx.png
+terminal-pixel
+// or npx terminal-pixel
 ```
 
-## Options
-
-### Size
-
-```shell
-terminal-pixel xxx.png -s 40
-// render size: 40 * 40
-terminal-pixel xxx.png -s 40x10
-// render size: 40 * 10
 ```
+> Pixel Center
+  Game Center
+/Users/xx/bad-apple.mp4
+
+--------------or--------------
+
+  Pixel Center
+> Game Center
+
+> snake
+
+Use the 'esc' key to exit the game
+```
+
+## Pixel center
+
+1. Render image in your terminal
+2. Render video in your terminal(You need to download [ffmpeg](https://ffmpeg.org/download.html))
+
+## Game center
+
+1. Snake

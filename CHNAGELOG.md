@@ -14,3 +14,10 @@ All notable changes to this project will be documented in this file.
 
 - 🍵 Output no wrap
 - 🔧 Fix rendering issues when the number of rows is odd
+
+## 1.1.2
+
+### Added
+
+- 🎬 Video player
+- 🎮 Game center
