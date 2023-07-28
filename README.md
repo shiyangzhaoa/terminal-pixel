@@ -35,7 +35,7 @@ terminal-pixel
   Game Center
 /Users/xx/bad-apple.mp4
 
---------------or--------------
+-------------- or --------------
 
   Pixel Center
 > Game Center
@@ -47,9 +47,18 @@ Use the 'esc' key to exit the game
 
 ## Pixel center
 
-1. Render image in your terminal
-2. Render video in your terminal(You need to download [ffmpeg](https://ffmpeg.org/download.html))
+### Render image in your terminal
+
+<img style="max-width: 640px" src="./demo/frog_flower.gif" alt="Frog Flower">
+
+### Render video in your terminal
+
+You need to download [ffmpeg](https://ffmpeg.org/download.html)
+
+<img src="./demo/bad_apple.gif" alt="Bad Apple">
 
 ## Game center
 
-1. Snake
+### Snake
+
+<img src="./demo/snake.gif" alt="Snake">
