@@ -11,10 +11,12 @@ Render Pixel in Your Terminal
     <a href="https://github.com/shiyangzhaoa/terminal-pixel/blob/main/LICENSE"><img src="https://shields.io/github/license/shiyangzhaoa/terminal-pixel?style=flat-square" alt="License"></a>
 </p>
 
-## Example
+## demo
+
+You can use this image:
 
 <p>
-  <img src="./example.png" alt="Example">
+  <img src="./demo.png" alt="Example">
 </p>
 
 ## Install
@@ -49,13 +51,13 @@ Use the 'esc' key to exit the game
 
 ### Render image in your terminal
 
-<img src="./demo/frog_flower.gif" alt="Frog Flower">
+<img src="./demo/frog-flower.gif" alt="Frog Flower">
 
 ### Render video in your terminal
 
 You need to download [ffmpeg](https://ffmpeg.org/download.html)
 
-<img src="./demo/bad_apple.gif" alt="Bad Apple">
+<img src="./demo/bad-apple.gif" alt="Bad Apple">
 
 ## Game center
 
