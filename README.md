@@ -49,7 +49,7 @@ Use the 'esc' key to exit the game
 
 ### Render image in your terminal
 
-<img style="max-width: 640px" src="./demo/frog_flower.gif" alt="Frog Flower">
+<img src="./demo/frog_flower.gif" alt="Frog Flower">
 
 ### Render video in your terminal
 
