@@ -11,13 +11,8 @@ Render Pixel in Your Terminal
     <a href="https://github.com/shiyangzhaoa/terminal-pixel/blob/main/LICENSE"><img src="https://shields.io/github/license/shiyangzhaoa/terminal-pixel?style=flat-square" alt="License"></a>
 </p>
 
-## demo
-
-You can use this image:
-
-<p>
-  <img src="./demo.png" alt="Example">
-</p>
+## Material
+[Pokemon-Redfigma](https://www.figma.com/community/file/1111031070438574852/Pokemon-Redfigma)
 
 ## Install
 
