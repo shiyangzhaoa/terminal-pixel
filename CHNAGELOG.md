@@ -21,3 +21,9 @@ All notable changes to this project will be documented in this file.
 
 - 🎬 Video player
 - 🎮 Game center
+
+## 1.1.3
+
+### Added
+
+- 🎉 ascii code support
