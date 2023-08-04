@@ -5,7 +5,7 @@ import { createCanvas, loadImage } from 'canvas';
 import sizeOf from 'image-size';
 
 import { config } from '../config.mjs';
-import { _dirname } from '../constants.mjs';
+import { PixelEnum, _dirname } from '../constants.mjs';
 import { getImageOutput } from './image.mjs';
 
 import type { Options, Size } from '../type.mjs';
@@ -15,7 +15,7 @@ const sleep = (t: number) => new Promise((r) => setTimeout(() => r(undefined), t
 
 export async function video(
   filePath: string,
-  { size, options }: { size: Size, options: Options }
+  { size, options, pixel }: { size: Size, options: Options, pixel: PixelEnum },
 ) {
   if (!existsSync(imagesPath)) {
     mkdirSync(imagesPath);
@@ -65,7 +65,7 @@ export async function video(
 
       ctx.drawImage(image, 0, 0, size.w, size.h);
       const imageData = ctx.getImageData(0, 0, size.w, size.h);
-      const outStr = getImageOutput(imageData, options);
+      const outStr = getImageOutput(imageData, options, pixel);
 
       if (i === 1) {
         process.stdout.write('\u001b[2J');

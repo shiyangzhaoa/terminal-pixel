@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import { createCanvas, loadImage } from 'canvas';
-import { input } from '@inquirer/prompts';
+import { input, select } from '@inquirer/prompts';
 import sizeOf from 'image-size';
 
 import { isImage, isVideo } from '../validators/fs.mjs';
+import { PixelEnum } from '../constants.mjs';
 import { defaultSize } from '../config.mjs';
 import { getImageOutput } from './image.mjs';
 import { video } from './video.mjs';
@@ -27,6 +28,22 @@ export async function pixel(options: Options) {
     });
     const src= _src.trim();
 
+    const pixel = await select({
+      message: 'Please select the module you want to enter.',
+      choices: [
+        {
+          name: 'Lattice',
+          value: PixelEnum.lattice,
+          description: 'render image or video with ▀',
+        },
+        {
+          name: 'Ascii Code',
+          value: PixelEnum.ascii,
+          description: 'render image or video with ascii code',
+        },
+      ],
+    });
+
     const size = {
       w: defaultSize.w,
       h: defaultSize.h,
@@ -49,14 +66,14 @@ export async function pixel(options: Options) {
       ctx.drawImage(image, 0, 0, size.w, size.h);
       const imageData = ctx.getImageData(0, 0, size.w, size.h);
 
-      const outStr = getImageOutput(imageData, options);
+      const outStr = getImageOutput(imageData, options, pixel);
       process.stdout.write(outStr);
 
       return;
     }
 
     if (isVideo(src)) {
-      video(src, { size, options });
+      video(src, { size, options, pixel });
 
       return;
     }
