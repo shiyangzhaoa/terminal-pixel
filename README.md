@@ -46,16 +46,16 @@ Use the 'esc' key to exit the game
 
 ### Render image in your terminal
 
-<img src="./demo/frog-flower.gif" alt="Frog Flower">
+<img src="./demo/frog-flower.png" alt="Frog Flower">
 
 ### Render video in your terminal
 
 You need to download [ffmpeg](https://ffmpeg.org/download.html)
 
-<img src="./demo/bad-apple.gif" alt="Bad Apple">
+<img src="./demo/ji.png" alt="Bad Apple">
 
 ## Game center
 
 ### Snake
 
-<img src="./demo/snake.gif" alt="Snake">
+<img src="./demo/snake.png" alt="Snake">
